@@ -1,3 +1,7 @@
+.container{
+  width: 1100px;
+  margin: 0 auto;
+}
 .accardion {
   transition: all 500ms ease;
   display: flex;

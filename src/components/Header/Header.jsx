@@ -3,13 +3,13 @@ import {NavLink} from "react-router-dom"
 
 import './Header.scss';
 export default function Header() {
-    const links = ["accardion"]
+    const links = ["accardion", "menu"]
     return (
         <header>
             <ul>
                 {links.map(link => (
                     <li>
-                        <NavLink to="/accardion" activeClassName="active">
+                        <NavLink to={link} activeClassName="active">
                             {link}
                         </NavLink>
                     </li>

@@ -6,7 +6,11 @@ header{
     color: #fff;
     padding: 0 100px;
 }
+ul{
+    display: flex;
+}
 ul li {
+    margin: 0 10px;
     cursor: pointer;
     a{
         text-decoration: none;

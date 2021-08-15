@@ -1,15 +1,20 @@
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Accardion from './components/Accardion/Accardion';
 
 import Header from './components/Header/Header';
+import Menu from './components/Meals/Menu/Menu';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
-      <Route path="/accardion" component={Accardion} />
-     
+      <Switch>
+       <div className="container">
+        <Route path="/accardion" component={Accardion} />
+        <Route path="/menu" component={Menu} />
+       </div>
+      </Switch>
     </div>
   );
 }

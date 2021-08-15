@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from "react-router-dom"
 
 import './Header.scss';
 export default function Header() {
@@ -8,7 +9,9 @@ export default function Header() {
             <ul>
                 {links.map(link => (
                     <li>
-                        {link}
+                        <NavLink to="/accardion" activeClassName="active">
+                            {link}
+                        </NavLink>
                     </li>
                 ))}
             </ul>

@@ -10,6 +10,7 @@
   background-color: #373737;
   border-radius: 5px;
   padding: 10px;
+  box-shadow: 0 0 5px 2px #000;
 }
 .accardion__item{
   position: relative;
@@ -63,8 +64,7 @@
 
 .btn {
   cursor: pointer;
-
-  color: #fff;
+  color: #c2c2c2;
   border: none;
   height: 30px;
   border-radius: 5px;
@@ -76,5 +76,5 @@
   left: 50%;
   transform: translate(-50%);
   width: 50px;
-  background-color: #1c1c1c;
+  background-color: #464646;
 }

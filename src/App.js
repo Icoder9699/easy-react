@@ -4,6 +4,7 @@ import Accardion from './components/Accardion/Accardion';
 
 import Header from './components/Header/Header';
 import Menu from './components/Meals/Menu/Menu';
+import Tabs from './components/Tabs/Tabs';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
        <div className="container">
         <Route path="/accardion" component={Accardion} />
         <Route path="/menu" component={Menu} />
+        <Route path="/tabs" component={Tabs} />
        </div>
       </Switch>
     </div>

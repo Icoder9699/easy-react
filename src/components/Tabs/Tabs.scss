@@ -1,0 +1,71 @@
+.tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.tabs__title{
+}
+
+.tabs__row{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.tabs__sidebar{
+}
+
+.tabs__sidebar-jobs{
+    display: flex;
+    flex-direction: column;
+    li{
+        padding: 10px 20px;
+        &.active{
+            border-left: 3px solid rgb(118, 206, 212);
+        }
+    }
+}
+
+.underline{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5px;;
+    width: 100px;
+    height: 3px;
+    border-radius: 10px;
+    background: rgb(118, 206, 212);
+}
+
+.tabs__content{
+    width: 800px;
+    h4{
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+    h5{
+        background: #ccc;
+        display: inline-block;
+        padding: 5px;
+        border-radius: 3px;
+        color: rgb(133, 133, 133);
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 12px;
+        color:rgb(156, 156, 156);
+        margin-bottom: 10px;
+    }
+    li{
+        margin-bottom: 20px;
+        display: flex;
+        list-style-type: none;
+        svg{
+            height: 20px;
+            width: 20px;
+            margin-right: 20px;
+            fill: rgb(118, 206, 212);
+        }
+    }
+}

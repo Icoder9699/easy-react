@@ -1,9 +1,25 @@
+.loading{
+    text-align: center;
+    margin-top: 100px;
+    font-weight: normal;
+    transition: loading 500ms ease-in;
+    animation: load 5s infinite;
+}
+
+@keyframes load {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+}
+
 .tabs{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 50px 0;
+
 }
 
 .tabs__title{
@@ -15,6 +31,7 @@
     justify-content: space-between;
 }
 .tabs__sidebar{
+    margin-right: 50px;
 }
 
 .tabs__sidebar-jobs{
@@ -23,7 +40,8 @@
     li{
         padding: 10px 20px;
         &.active{
-            border-left: 3px solid rgb(118, 206, 212);
+            border-left: 2px solid rgb(118, 206, 212);
+            color:rgb(118, 206, 212);
         }
     }
 }
@@ -39,10 +57,13 @@
 }
 
 .tabs__content{
-    width: 800px;
+    max-width: 768px;
+    margin-top: 10px;
+    margin: 5px auto;
     h4{
-        font-weight: normal;
         margin-bottom: 10px;
+        font-weight: 300;
+        font-size: 20px;
     }
     h5{
         background: #ccc;
@@ -61,11 +82,37 @@
         margin-bottom: 20px;
         display: flex;
         list-style-type: none;
+        p{
+            color: #000;
+        }
         svg{
             height: 20px;
             width: 20px;
             margin-right: 20px;
             fill: rgb(118, 206, 212);
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs{
+        margin: 20px 0;
+    }
+    .tabs__row{
+        margin: 20px 0;
+        flex-direction: column;
+    }
+    .tabs__sidebar{
+        margin: 0 auto;
+    }
+    .tabs__sidebar-jobs{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .tabs__content{
+        max-width: 768px;
+        margin: 0 20px;
     }
 }

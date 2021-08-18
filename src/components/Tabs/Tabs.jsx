@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa'
 
-import "./Tabs.scss";
+import "./Tabs.scss"
 const url = 'https://course-api.com/react-tabs-project'
 
 export default function Tabs() {
@@ -12,7 +12,6 @@ export default function Tabs() {
     const fetchDates = async () => {
         const res = await fetch(url);
         const resData = await res.json();
-        console.log(resData);
         setJobs(resData);
         setLoading(false);
     }
@@ -39,8 +38,8 @@ export default function Tabs() {
                     <ul className="tabs__sidebar-jobs">
                         {jobs && jobs.map((job, index) => (
                             <li 
-                                key={job.order}
-                                className={activeTab === index && "active"}
+                                key={index}
+                                className={activeTab === index ? "active" : ""}
                                 onClick={() => setActiveTab(index)}
                             >
                                 {job.company}
@@ -52,8 +51,8 @@ export default function Tabs() {
                     <h4>{title}</h4>
                     <h5>{company}</h5>
                     <p>{dates}</p> 
-                    {jobs && duties.map(duty => (
-                        <li>
+                    {jobs && duties.map((duty, index) => (
+                        <li key={index}>
                             <FaAngleDoubleRight/>
                             <p>{duty}</p>
                         </li>

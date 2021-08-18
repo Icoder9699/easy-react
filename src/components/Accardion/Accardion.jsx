@@ -32,7 +32,11 @@ export default function Accardion() {
             {
             accardions.map((accardion, index) => {
                 return (
-                <div className={`accardion__item ${accardion.id === activeItem && "active"}`} onClick={() => setActiveItem(accardion.id)}>
+                <div 
+                  className={`accardion__item ${accardion.id === activeItem ? "active" : ""}`}    
+                  onClick={() => setActiveItem(accardion.id)}
+                  key={index}
+                >
                     <div className="accardion__item-title">
                         {accardion.name}
                     </div>

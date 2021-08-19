@@ -5,10 +5,10 @@
     height: calc(100vh - 50px);
 }
 .QuizWrapper{
-    background: rgb(145, 133, 218);
+    background: rgba(36,36,156,1) 35%;
     color: #fff;
-    width: 400px;
-    height: 200px;
+    width: 500px;
+    min-height: 200px;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;

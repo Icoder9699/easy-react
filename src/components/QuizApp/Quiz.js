@@ -48,7 +48,26 @@ export default class Quiz extends Component {
                         id: 3
                     }
                 ]
-            }
+            },
+            {
+                questionId: 3,
+                rightAnswerId: 3,
+                question: "O'zbekiston Respublikasi maydoni?",
+                answers: [
+                    {
+                        answer: "470.000 km^2",
+                        id: 1
+                    },
+                    {
+                        answer: "376.321 km^2",
+                        id: 2
+                    },
+                    {
+                        answer: "448,978 km^2",
+                        id: 3
+                    }
+                ]
+            },
         ],
     }
     
@@ -60,7 +79,8 @@ export default class Quiz extends Component {
             }
         }
 
-        const question = this.state.quizes[this.state.activeQuiz];
+        const question = this.state.quizes[this.state.activeQuiz]
+        const results  = this.state.results
 
         if(this.state.activeQuiz + 1 === this.state.quizes.length){
             alert("you have been finished!")
@@ -70,9 +90,10 @@ export default class Quiz extends Component {
         }
 
         if(answerId === question.rightAnswerId){
+            results[question.questionId] = "success"
             this.setState({
                 answerState: {[answerId]: "success"},
-                results: {[question.questionId]: "success"} 
+                results
             })
             const timeout = window.setTimeout(() => {
                 this.setState({ 
@@ -83,14 +104,16 @@ export default class Quiz extends Component {
             }, 1000)
 
         }else {
+            results[question.questionId] = "error"
             this.setState({
                 answerState: {[answerId]: "error"},
+                results
             })
+
             const timeout = window.setTimeout(() => {
                 this.setState({
                     activeQuiz: this.state.activeQuiz + 1,
                     answerState: null,
-                    results: {[question.questionId]: "error"} 
                 })
                 window.clearTimeout(timeout)
             }, 1000)
@@ -98,6 +121,14 @@ export default class Quiz extends Component {
         }
     }
 
+    retryQuizHandler = () => {
+        this.setState({
+            results: [],
+            isFinished: false,
+            activeQuiz: 0,
+            answerState: null
+        })
+    }
 
     render() {
         return (
@@ -113,8 +144,9 @@ export default class Quiz extends Component {
                         />
                         : 
                         <FinishedQuiz 
-                            quizes = {this.state.quizes}
+                            quizes  = {this.state.quizes}
                             results = {this.state.results}
+                            onRetry = {this.retryQuizHandler}
                         />
                     }
                 </div>

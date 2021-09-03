@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom"
 
 import './Header.scss';
 export default function Header() {
-    const links = ["accardion", "menu", "tabs" , "quiz-app", 'form']
+    const links = ["accardion", "menu", "tabs" , "quiz-app", 'form', 'mobiles'];
     return (
         <header>
             <ul>

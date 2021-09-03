@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"name": "Samsung Galaxy s21",
+		"price": 999,
+		"colors": ["black", "silver"],
+		"imgUrl": "images/mobiles/s21.jpg",
+		"info": "Samsung s21 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, quos dolores! Dolorem deleniti saepe laborum exercitationem doloribus nobis, itaque repellendus doloremque recusandae tempore delectus voluptatem id quo incidunt. Consequuntur, illo."
+	},
+	{
+		"id": 2,
+		"name": "Iphone 12 Pro Max",
+		"price": 1200,
+		"colors": ["grey", "black","silver"],
+		"imgUrl": "images/mobiles/iphone12.jpg",
+		"info": "Iphone 12 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, quos dolores! Dolorem deleniti saepe laborum exercitationem doloribus nobis, itaque repellendus doloremque recusandae tempore delectus voluptatem id quo incidunt. Consequuntur, illo."
+	},
+	{
+		"id": 3,
+		"name": "Xiaomi 11 Pro",
+		"price": 1099,
+		"colors": ["black"],
+		"imgUrl": "images/mobiles/mi11.jpg",
+		"info": "Xiaomi 11 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, quos dolores! Dolorem deleniti saepe laborum exercitationem doloribus nobis, itaque repellendus doloremque recusandae tempore delectus voluptatem id quo incidunt. Consequuntur, illo."
+	}
+]

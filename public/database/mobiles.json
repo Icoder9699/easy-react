@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"name": "Samsung Galaxy s21",
+		"price": 999,
+		"colors": ["black", "silver"],
+		"imgUrl": "../images/mobiles/s21.jpg"
+	},
+	{
+		"id": 2,
+		"name": "Iphone 12pro Max",
+		"price": 1200,
+		"colors": ["black", "grey","silver"],
+		"imgUrl": "../images/mobiles/s21.jpg"
+	},
+	{
+		"id": 3,
+		"name": "Xiaomi 11 Pro",
+		"price": 1099,
+		"colors": ["black"],
+		"imgUrl": "../images/mobiles/s21.jpg"
+	}
+]
